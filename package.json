@@ -1,0 +1,43 @@
+{
+  "name": "work-record",
+  "version": "1.0.0",
+  "description": "A tool for keeping track of part-time jobs",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -p .",
+    "start": "node dist/main.js",
+    "start:build": "tsc -p . && node dist/main.js",
+    "update": "git checkout main && git pull && npm run start:build",
+    "dev": "ts-node-dev --respawn --transpile-only src/main.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/half-nothing/work-record.git"
+  },
+  "author": "Half_nothing",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/half-nothing/work-record/issues"
+  },
+  "homepage": "https://github.com/half-nothing/work-record#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/module-alias": "^2.0.4",
+    "@types/node": "^20.12.12",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "module-alias": "^2.2.3",
+    "mysql2": "^3.9.7"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "_moduleAliases": {
+    "@": "dist",
+    "@config": "config"
+  }
+}
