@@ -1,0 +1,30 @@
+name: Compile TypeScript
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    name: "Compile TypeScript"
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+
+    - name: Set up nodejs
+      uses: actions/setup-node@v4
+      with:
+        node-version: '>=20.11.1'
+
+    - name: Install dependencies
+      run: |
+        npm i
+
+    - name: Compile
+      run: npm run build
