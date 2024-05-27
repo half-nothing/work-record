@@ -1,0 +1,27 @@
+QWidget {
+	background-color: #e4e4e4;
+}
+
+QWidget#side_bar QToolButton {
+	border-top: 3px outset transparent;
+	border-bottom: 7px outset transparent;
+	border-right: 3px outset transparent;
+	border-left: 3px outset transparent;
+    min-width: 80px;
+    min-height: 80px;
+	background-color: #e4e4e4;
+}
+
+QWidget#side_bar QToolButton:hover {
+	background-color: #cdcdcd;
+}
+
+QWidget#side_bar QToolButton:pressed,
+QWidget#side_bar QToolButton:checked {
+	border-left: 3px outset #5d5f61;
+	background-color: #f6f6f6;
+}
+
+QWidget#side_bar QPushButton:default {
+    border-color: navy;
+}

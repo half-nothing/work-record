@@ -9,14 +9,22 @@
 from PyQt6 import QtCore, QtGui, QtWidgets
 
 
-class Ui_Form(object):
-    def setupUi(self, Form):
-        Form.setObjectName("Form")
-        Form.resize(400, 300)
+class Ui_Location(object):
+    def setupUi(self, Location):
+        Location.setObjectName("Location")
+        Location.resize(400, 300)
+        self.gridLayout = QtWidgets.QGridLayout(Location)
+        self.gridLayout.setContentsMargins(0, 0, 0, 0)
+        self.gridLayout.setSpacing(0)
+        self.gridLayout.setObjectName("gridLayout")
+        self.label = QtWidgets.QLabel(parent=Location)
+        self.label.setObjectName("label")
+        self.gridLayout.addWidget(self.label, 0, 0, 1, 1)
 
-        self.retranslateUi(Form)
-        QtCore.QMetaObject.connectSlotsByName(Form)
+        self.retranslateUi(Location)
+        QtCore.QMetaObject.connectSlotsByName(Location)
 
-    def retranslateUi(self, Form):
+    def retranslateUi(self, Location):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "Form"))
+        Location.setWindowTitle(_translate("Location", "Form"))
+        self.label.setText(_translate("Location", "地点管理"))

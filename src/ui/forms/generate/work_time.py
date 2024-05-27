@@ -9,14 +9,22 @@
 from PyQt6 import QtCore, QtGui, QtWidgets
 
 
-class Ui_Form(object):
-    def setupUi(self, Form):
-        Form.setObjectName("Form")
-        Form.resize(400, 300)
+class Ui_WorkTime(object):
+    def setupUi(self, WorkTime):
+        WorkTime.setObjectName("WorkTime")
+        WorkTime.resize(400, 300)
+        self.gridLayout = QtWidgets.QGridLayout(WorkTime)
+        self.gridLayout.setContentsMargins(0, 0, 0, 0)
+        self.gridLayout.setSpacing(0)
+        self.gridLayout.setObjectName("gridLayout")
+        self.label = QtWidgets.QLabel(parent=WorkTime)
+        self.label.setObjectName("label")
+        self.gridLayout.addWidget(self.label, 0, 0, 1, 1)
 
-        self.retranslateUi(Form)
-        QtCore.QMetaObject.connectSlotsByName(Form)
+        self.retranslateUi(WorkTime)
+        QtCore.QMetaObject.connectSlotsByName(WorkTime)
 
-    def retranslateUi(self, Form):
+    def retranslateUi(self, WorkTime):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "Form"))
+        WorkTime.setWindowTitle(_translate("WorkTime", "Form"))
+        self.label.setText(_translate("WorkTime", "时间管理"))

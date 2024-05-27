@@ -8,4 +8,7 @@
     <file>icon/location.png</file>
     <file>icon/odometer.png</file>
   </qresource>
+  <qresource prefix="style">
+    <file>style/style.qss</file>
+  </qresource>
 </RCC>

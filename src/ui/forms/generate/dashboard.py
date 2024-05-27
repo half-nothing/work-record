@@ -9,14 +9,22 @@
 from PyQt6 import QtCore, QtGui, QtWidgets
 
 
-class Ui_Form(object):
-    def setupUi(self, Form):
-        Form.setObjectName("Form")
-        Form.resize(400, 300)
+class Ui_DashBoard(object):
+    def setupUi(self, DashBoard):
+        DashBoard.setObjectName("DashBoard")
+        DashBoard.resize(400, 300)
+        self.gridLayout = QtWidgets.QGridLayout(DashBoard)
+        self.gridLayout.setContentsMargins(0, 0, 0, 0)
+        self.gridLayout.setSpacing(0)
+        self.gridLayout.setObjectName("gridLayout")
+        self.label = QtWidgets.QLabel(parent=DashBoard)
+        self.label.setObjectName("label")
+        self.gridLayout.addWidget(self.label, 0, 0, 1, 1)
 
-        self.retranslateUi(Form)
-        QtCore.QMetaObject.connectSlotsByName(Form)
+        self.retranslateUi(DashBoard)
+        QtCore.QMetaObject.connectSlotsByName(DashBoard)
 
-    def retranslateUi(self, Form):
+    def retranslateUi(self, DashBoard):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "Form"))
+        DashBoard.setWindowTitle(_translate("DashBoard", "Form"))
+        self.label.setText(_translate("DashBoard", "仪表盘"))
