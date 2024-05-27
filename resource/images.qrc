@@ -1,0 +1,11 @@
+<RCC>
+  <qresource prefix="image">
+    <file>icon/icon.ico</file>
+    <file>icon/icon.png</file>
+    <file>icon/add-location.png</file>
+    <file>icon/histogram.png</file>
+    <file>icon/list.png</file>
+    <file>icon/location.png</file>
+    <file>icon/odometer.png</file>
+  </qresource>
+</RCC>

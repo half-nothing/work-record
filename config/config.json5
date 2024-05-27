@@ -1,0 +1,12 @@
+{
+  config_version: "1.0.1",
+  database: {
+    host: "./database.db",
+    password: "3CRXc4wWlRSoVbiNPeSvGvH7",
+    username: "root",
+    database_name: "bot",
+    port: 3306,
+    auto_commit: true,
+    ping_delay: 30
+  }
+}
