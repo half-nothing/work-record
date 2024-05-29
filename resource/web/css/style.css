@@ -1,0 +1,20 @@
+body > div {
+    display: inline-flex;
+    justify-content: center;
+}
+
+html, body,
+div.container {
+    height: 100%;
+    margin: 0;
+}
+
+html {
+    width: 800px;
+    height: 600px;
+}
+
+div.container {
+    height: 400px;
+    width: 400px;
+}

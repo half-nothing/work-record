@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>894</width>
+    <height>660</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -29,11 +29,70 @@
    <property name="spacing">
     <number>0</number>
    </property>
-   <item row="0" column="0">
-    <widget class="QLabel" name="label">
-     <property name="text">
-      <string>地点管理</string>
+   <item row="0" column="0" rowspan="2">
+    <widget class="QTableWidget" name="locationList">
+     <property name="font">
+      <font>
+       <family>宋体</family>
+      </font>
      </property>
+     <property name="editTriggers">
+      <set>QAbstractItemView::NoEditTriggers</set>
+     </property>
+     <property name="sortingEnabled">
+      <bool>true</bool>
+     </property>
+     <attribute name="verticalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+     <column>
+      <property name="text">
+       <string>序号</string>
+      </property>
+      <property name="font">
+       <font>
+        <family>宋体</family>
+        <pointsize>15</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>名称</string>
+      </property>
+      <property name="font">
+       <font>
+        <family>宋体</family>
+        <pointsize>15</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>地址</string>
+      </property>
+      <property name="font">
+       <font>
+        <family>宋体</family>
+        <pointsize>15</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>备注</string>
+      </property>
+      <property name="font">
+       <font>
+        <family>宋体</family>
+        <pointsize>15</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+     </column>
     </widget>
    </item>
   </layout>

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>687</width>
+    <height>536</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -21,20 +21,168 @@
     <number>0</number>
    </property>
    <property name="rightMargin">
-    <number>0</number>
+    <number>4</number>
    </property>
    <property name="bottomMargin">
     <number>0</number>
    </property>
    <property name="spacing">
-    <number>0</number>
+    <number>6</number>
    </property>
-   <item row="0" column="0">
+   <item row="2" column="1">
+    <widget class="QComboBox" name="location_select"/>
+   </item>
+   <item row="1" column="1">
     <widget class="QLabel" name="label">
+     <property name="font">
+      <font>
+       <family>宋体</family>
+       <pointsize>14</pointsize>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
      <property name="text">
-      <string>时间管理</string>
+      <string>地点</string>
      </property>
     </widget>
+   </item>
+   <item row="6" column="1">
+    <widget class="QDateEdit" name="date_edit">
+     <property name="calendarPopup">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <widget class="QLabel" name="label_2">
+     <property name="font">
+      <font>
+       <family>宋体</family>
+       <pointsize>14</pointsize>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>时长</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="1">
+    <widget class="QPushButton" name="add">
+     <property name="text">
+      <string>添加</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="1">
+    <widget class="QLabel" name="label_3">
+     <property name="font">
+      <font>
+       <family>宋体</family>
+       <pointsize>14</pointsize>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>时间</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <spacer name="verticalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="8" column="1">
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="0" column="0" rowspan="9">
+    <widget class="QTableWidget" name="record_list">
+     <column>
+      <property name="text">
+       <string>地点</string>
+      </property>
+      <property name="font">
+       <font>
+        <family>宋体</family>
+        <pointsize>15</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>时长(h)</string>
+      </property>
+      <property name="font">
+       <font>
+        <family>宋体</family>
+        <pointsize>15</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>年</string>
+      </property>
+      <property name="font">
+       <font>
+        <family>宋体</family>
+        <pointsize>15</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>月</string>
+      </property>
+      <property name="font">
+       <font>
+        <family>宋体</family>
+        <pointsize>15</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>日</string>
+      </property>
+      <property name="font">
+       <font>
+        <family>宋体</family>
+        <pointsize>15</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item row="4" column="1">
+    <widget class="QDoubleSpinBox" name="time_edit"/>
    </item>
   </layout>
  </widget>

@@ -28,7 +28,7 @@ class SqliteDatabase:
             if isinstance(query, str):
                 query = " ".join(list(filter(lambda x: x != '', query.replace('\n', '').split(" "))))
             else:
-                map(lambda i: " ".join(list(filter(lambda x: x != '', i.replace('\n', '').split(" ")))), query)
+                query = map(lambda i: " ".join(list(filter(lambda x: x != '', i.replace('\n', '').split(" ")))), query)
             if isinstance(query, str):
                 if args is None:
                     args = tuple()

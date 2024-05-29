@@ -7,6 +7,7 @@
 
 
 from PyQt6 import QtCore, QtGui, QtWidgets
+from PyQt6 import QtWebEngineWidgets
 
 
 class Ui_DashBoard(object):
@@ -17,9 +18,10 @@ class Ui_DashBoard(object):
         self.gridLayout.setContentsMargins(0, 0, 0, 0)
         self.gridLayout.setSpacing(0)
         self.gridLayout.setObjectName("gridLayout")
-        self.label = QtWidgets.QLabel(parent=DashBoard)
-        self.label.setObjectName("label")
-        self.gridLayout.addWidget(self.label, 0, 0, 1, 1)
+        self.webEngineView = QtWebEngineWidgets.QWebEngineView(parent=DashBoard)
+        self.webEngineView.setUrl(QtCore.QUrl("about:blank"))
+        self.webEngineView.setObjectName("webEngineView")
+        self.gridLayout.addWidget(self.webEngineView, 0, 0, 1, 1)
 
         self.retranslateUi(DashBoard)
         QtCore.QMetaObject.connectSlotsByName(DashBoard)
@@ -27,4 +29,3 @@ class Ui_DashBoard(object):
     def retranslateUi(self, DashBoard):
         _translate = QtCore.QCoreApplication.translate
         DashBoard.setWindowTitle(_translate("DashBoard", "Form"))
-        self.label.setText(_translate("DashBoard", "仪表盘"))

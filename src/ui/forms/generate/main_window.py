@@ -12,7 +12,8 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(800, 600)
+        MainWindow.resize(900, 750)
+        MainWindow.setMinimumSize(QtCore.QSize(900, 750))
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(":/image/icon/icon.ico"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         MainWindow.setWindowIcon(icon)
@@ -24,6 +25,7 @@ class Ui_MainWindow(object):
         self.gridLayout_2.setSpacing(0)
         self.gridLayout_2.setObjectName("gridLayout_2")
         self.body_stacked_widget = QtWidgets.QStackedWidget(parent=self.centralwidget)
+        self.body_stacked_widget.setEnabled(True)
         self.body_stacked_widget.setObjectName("body_stacked_widget")
         self.gridLayout_2.addWidget(self.body_stacked_widget, 0, 1, 1, 1)
         self.side_bar = QtWidgets.QWidget(parent=self.centralwidget)
@@ -82,7 +84,6 @@ class Ui_MainWindow(object):
         self.dashboard.setIcon(icon3)
         self.dashboard.setIconSize(QtCore.QSize(48, 48))
         self.dashboard.setCheckable(True)
-        self.dashboard.setChecked(True)
         self.dashboard.setAutoExclusive(True)
         self.dashboard.setToolButtonStyle(QtCore.Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.dashboard.setObjectName("dashboard")
@@ -90,7 +91,7 @@ class Ui_MainWindow(object):
         self.gridLayout_2.addWidget(self.side_bar, 0, 0, 1, 1)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menuBar = QtWidgets.QMenuBar(parent=MainWindow)
-        self.menuBar.setGeometry(QtCore.QRect(0, 0, 800, 21))
+        self.menuBar.setGeometry(QtCore.QRect(0, 0, 900, 21))
         self.menuBar.setObjectName("menuBar")
         MainWindow.setMenuBar(self.menuBar)
 
